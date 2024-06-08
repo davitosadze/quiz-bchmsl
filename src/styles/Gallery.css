@@ -1,0 +1,25 @@
+.gallery-container {
+  padding: 20px;
+}
+
+.photos-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.photo-item {
+  flex: 1 1 calc(25% - 20px);
+  box-sizing: border-box;
+  margin: 10px;
+  padding: 10px;
+  border: 1px solid gray;
+  border-radius: 4px;
+  text-align: center;
+}
+
+.photo-item img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 4px;
+}
