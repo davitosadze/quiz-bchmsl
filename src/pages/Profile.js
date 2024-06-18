@@ -7,7 +7,7 @@ function Profile() {
 
   return (
     <div className="profile-container">
-      <h1>Made By {name ? name : "Davit Osadze"}</h1>
+      <h1>Made By {name ? name : "Bachana Mosulishvili"}</h1>
     </div>
   );
 }

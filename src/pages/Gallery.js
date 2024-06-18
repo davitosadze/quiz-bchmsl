@@ -2,18 +2,22 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 import "../styles/Gallery.css";
 
-function Gallery() {
+const Gallery = () => {
   const [photos, setPhotos] = useState([]);
 
   useEffect(() => {
-    axios
-      .get("https://jsonplaceholder.typicode.com/photos?_limit=4")
-      .then((response) => {
+    const fetchPhotos = async () => {
+      try {
+        const response = await axios.get(
+          "https://jsonplaceholder.typicode.com/photos?_limit=4"
+        );
         setPhotos(response.data);
-      })
-      .catch((error) => {
+      } catch (error) {
         console.error("Error fetching the photos:", error);
-      });
+      }
+    };
+
+    fetchPhotos();
   }, []);
 
   return (
@@ -29,6 +33,6 @@ function Gallery() {
       </div>
     </div>
   );
-}
+};
 
 export default Gallery;

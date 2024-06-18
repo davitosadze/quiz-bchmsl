@@ -1,17 +1,18 @@
 import React from "react";
 import "../styles/ErrorPage.css";
 
-function ErrorPage() {
+const ErrorPage = () => {
+  const gifUrl = "https://media.giphy.com/media/14uQ3cOFteDaU/giphy.gif"; // New GIF URL
+
   return (
     <div className="error-page">
       <h1>404 Not Found</h1>
-      <p>Oops! Looks like you've reached a page that doesn't exist.</p>
-      <img
-        src="https://media.giphy.com/media/YyKPbc5OOTSQE/giphy.gif"
-        alt="Funny Gif"
-      />
+      <p className="error-message">
+        Oops! Looks like you've reached a page that doesn't exist.
+      </p>
+      <img src={gifUrl} alt="Funny Gif" />
     </div>
   );
-}
+};
 
 export default ErrorPage;
